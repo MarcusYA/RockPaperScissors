@@ -61,10 +61,4 @@ function randomNumber() {
     resultDisplay.innerHTML = result
   }
 
-  function scoreBoard() {
-    if (result === "Gratulations - You won!") {
-        yourScore += 1;
-    } else {
-        oponentScore += 1;
-    }
-}
+  
