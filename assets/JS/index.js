@@ -8,6 +8,7 @@ buttonPushed.forEach(button => button.addEventListener('click', () => {
     userChoice = button.textContent;
     yourChoiceDisplay.innerHTML = userChoice;
     randomNumber()
+    resultShow()
 }));
 
 function randomNumber() {
@@ -23,4 +24,36 @@ function randomNumber() {
       oponentChoice = 'PAPER'
     }
     oponentChoiceDisplay.innerHTML = oponentChoice
+  }
+
+  function resultShow() {
+    if (oponentChoice === userChoice) {
+      result = 'Draw!'
+    }
+    if (oponentChoice === 'ROCK' && userChoice === "PAPER") {
+      result = "Gratulations - You won!"
+      
+    }
+    if (oponentChoice === 'ROCK' && userChoice === "SCISSORS") {
+      result = 'Sorry - You lost!'
+      
+      
+    }
+    if (oponentChoice === 'PAPER' && userChoice === "SCISSORS") {
+      result = "Gratulations - You won!"
+      
+    }
+    if (oponentChoice === 'PAPER' && userChoice === "ROCK") {
+      result = 'Sorry - You lost!'
+      
+    }
+    if (oponentChoice === 'SCISSORS' && userChoice === "ROCK") {
+      result = "Gratulations - You won!"
+      
+    }
+    if (oponentChoice === 'SCISSORS' && userChoice === "PAPER") {
+      result = 'Sorry - You lost!'
+      
+    }
+    resultDisplay.innerHTML = result
   }
