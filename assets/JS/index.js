@@ -7,5 +7,20 @@ let userChoice
 buttonPushed.forEach(button => button.addEventListener('click', () => {
     userChoice = button.textContent;
     yourChoiceDisplay.innerHTML = userChoice;
+    randomNumber()
 }));
-console.log(userChoice);
+
+function randomNumber() {
+    const randomNumber = Math.floor(Math.random() * 3) + 1 
+    
+    if (randomNumber === 1) {
+      oponentChoice = 'ROCK'
+    }
+    if (randomNumber === 2) {
+      oponentChoice = 'SCISSORS'
+    }
+    if (randomNumber === 3) {
+      oponentChoice = 'PAPER'
+    }
+    oponentChoiceDisplay.innerHTML = oponentChoice
+  }
