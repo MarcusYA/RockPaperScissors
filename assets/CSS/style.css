@@ -32,12 +32,19 @@ body {
 
 }
 
-.btn:hover {
+.btn {
+    width: 150px;
+    height: 100px;
     background-color: red;
     color: white;
+}
+
+.btn:hover {
+    background-color: Black;
+    color: red;
     }
 
-    
+
 
     .oponentChoiceDisplay {
         color: green;
