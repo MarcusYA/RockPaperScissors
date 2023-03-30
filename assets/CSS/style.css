@@ -21,6 +21,16 @@ body {
     height: 70px;
 }
 
+.knappar {
+    width: 200px;
+    height: 70px;
+}
+
+#startText {
+    font-size: 40;
+    color: red;
+
+}
 
 .btn:hover {
     background-color: red;

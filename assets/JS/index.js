@@ -12,7 +12,8 @@ buttonPushed.forEach(btn => btn.addEventListener('click', () => {
     yourChoiceDisplay.innerHTML = userChoice;
     randomNumber()
     resultShow()
-    relodingPage()
+    reloadingPage()
+    reloadingPage2()
   
 }));
 
@@ -124,8 +125,16 @@ function randomNumber() {
     resultDisplay.innerHTML = result
   }
 
-  function relodingPage() {
-    if (oponentScore.innerHTML == 5 || yourScore.innerHTML == 5) {
-      window.location = "http://www.google.com";
+  function reloadingPage() {
+    if (yourScore.innerHTML == 5) {
+      alert("Gratulation - You won!!");
+      window.location = "index.html";
+    }
+  }
+
+  function reloadingPage2() {
+    if (oponentScore.innerHTML == 5) {
+      alert("Sorry You lost!!");
+      window.location = "index.html";
     }
   }
