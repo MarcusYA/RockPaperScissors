@@ -5,6 +5,7 @@ const buttonPushed = document.querySelectorAll('.button');
 let userChoice
 const yourScore = document.getElementById("yourScore").innerText;
 const oponentScore = document.getElementById("oponentScore").innerText;
+let oponentChoice
 
 buttonPushed.forEach(button => button.addEventListener('click', () => {
     userChoice = button.textContent;
@@ -60,5 +61,10 @@ function randomNumber() {
     resultDisplay.innerHTML = result
   }
 
-  console.log(oponentScore);
-  console.log(yourScore);
+  function scoreBoard() {
+    if (result === "Gratulations - You won!") {
+        yourScore += 1;
+    } else {
+        oponentScore += 1;
+    }
+}
