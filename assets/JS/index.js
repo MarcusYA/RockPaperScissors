@@ -12,6 +12,8 @@ buttonPushed.forEach(btn => btn.addEventListener('click', () => {
     yourChoiceDisplay.innerHTML = userChoice;
     randomNumber()
     resultShow()
+    relodingPage()
+  
 }));
 
 function randomNumber() {
@@ -120,4 +122,10 @@ function randomNumber() {
         oponentScore.innerHTML = parseInt(oponentScore.innerHTML)+1
         }
     resultDisplay.innerHTML = result
+  }
+
+  function relodingPage() {
+    if (oponentScore.innerHTML == 5 || yourScore.innerHTML == 5) {
+      window.location = "http://www.google.com";
+    }
   }
