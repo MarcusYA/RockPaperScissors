@@ -1,21 +1,21 @@
 const oponentChoiceDisplay = document.getElementById('oponentChoiceDisplay');
 const yourChoiceDisplay = document.getElementById('yourChoiceDisplay');
 const resultDisplay = document.getElementById('resultDisplay');
-const buttonPushed = document.querySelectorAll('.button');
+const buttonPushed = document.querySelectorAll('.btn');
 let userChoice
-const yourScore = document.getElementById("yourScore").innerText;
-const oponentScore = document.getElementById("oponentScore").innerText;
+const yourScore = document.getElementById("yourScore");
+const oponentScore = document.getElementById("oponentScore");
 let oponentChoice
 
-buttonPushed.forEach(button => button.addEventListener('click', () => {
-    userChoice = button.textContent;
+buttonPushed.forEach(btn => btn.addEventListener('click', () => {
+    userChoice = btn.textContent;
     yourChoiceDisplay.innerHTML = userChoice;
     randomNumber()
     resultShow()
 }));
 
 function randomNumber() {
-    const randomNumber = Math.floor(Math.random() * 3) + 1 
+    const randomNumber = Math.floor(Math.random() * 5) + 1 
     
     if (randomNumber === 1) {
       oponentChoice = 'ROCK'
@@ -26,6 +26,12 @@ function randomNumber() {
     if (randomNumber === 3) {
       oponentChoice = 'PAPER'
     }
+    if (randomNumber === 4) {
+        oponentChoice = 'LIZARD'
+      }
+      if (randomNumber === 5) {
+        oponentChoice = 'SPOCK'
+      }
     oponentChoiceDisplay.innerHTML = oponentChoice
   }
 
@@ -35,7 +41,7 @@ function randomNumber() {
     }
     if (oponentChoice === 'ROCK' && userChoice === "PAPER") {
       result = "Gratulations - You won!"
-      
+      yourScore.innerHTML = parseInt(yourScore.innerHTML)+1 
     }
     if (oponentChoice === 'ROCK' && userChoice === "SCISSORS") {
       result = 'Sorry - You lost!'
@@ -44,7 +50,7 @@ function randomNumber() {
     }
     if (oponentChoice === 'PAPER' && userChoice === "SCISSORS") {
       result = "Gratulations - You won!"
-      
+      yourScore.innerHTML = parseInt(yourScore.innerHTML)+1
     }
     if (oponentChoice === 'PAPER' && userChoice === "ROCK") {
       result = 'Sorry - You lost!'
@@ -52,7 +58,7 @@ function randomNumber() {
     }
     if (oponentChoice === 'SCISSORS' && userChoice === "ROCK") {
       result = "Gratulations - You won!"
-      
+      yourScore.innerHTML = parseInt(yourScore.innerHTML)+1
     }
     if (oponentChoice === 'SCISSORS' && userChoice === "PAPER") {
       result = 'Sorry - You lost!'
@@ -60,5 +66,3 @@ function randomNumber() {
     }
     resultDisplay.innerHTML = result
   }
-
-  
