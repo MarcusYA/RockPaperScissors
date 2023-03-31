@@ -1,3 +1,5 @@
+
+//code to take info from html
 const oponentChoiceDisplay = document.getElementById('oponentChoiceDisplay');
 const yourChoiceDisplay = document.getElementById('yourChoiceDisplay');
 const resultDisplay = document.getElementById('resultDisplay');
@@ -8,6 +10,8 @@ const oponentScore = document.getElementById("oponentScore");
 let oponentChoice;
 let result;
 
+//code for events
+
 buttonPushed.forEach(btn => btn.addEventListener('click', () => {
     userChoice = btn.textContent;
     yourChoiceDisplay.innerHTML = userChoice;
@@ -17,6 +21,8 @@ buttonPushed.forEach(btn => btn.addEventListener('click', () => {
     reloadingPage2();
   
 }));
+
+//code to decide randomnumber
 
 function randomNumber() {
     const randomNumber = Math.floor(Math.random() * 5) + 1;
@@ -38,6 +44,8 @@ function randomNumber() {
       }
     oponentChoiceDisplay.innerHTML = oponentChoice;
   }
+
+//Decide winner
 
   function resultShow() {
     if (oponentChoice === userChoice) {
@@ -125,6 +133,8 @@ function randomNumber() {
         }
     resultDisplay.innerHTML = result;
   }
+
+// reloding pages
 
   function reloadingPage() {
     if (yourScore.innerHTML == 5) {

@@ -1,3 +1,5 @@
+/* import of fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
 body {
@@ -6,6 +8,8 @@ body {
     background-size: cover;
     background-position: center;
 }
+
+/* under is coding for styling with representativs names */
 
 .gameArea {
     text-align: center;
