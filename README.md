@@ -5,6 +5,7 @@ This page is an online gamesite where you can enjoy playing against the computer
 With a simple click you will start.
 
 ![image](https://user-images.githubusercontent.com/101025365/228987694-9581e23e-80b9-4f2c-abc3-c3d732f06a66.png)
+https://ui.dev/amiresponsive?url=https://8000-marcusya-rockpapersciss-rvukuy5kfyg.ws-eu93.gitpod.io/index.html
 
 ## Features
 
